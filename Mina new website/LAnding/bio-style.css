@@ -1,0 +1,178 @@
+/* General Styles */
+body {
+    font-family: "Georgia", serif;
+    margin: 0;
+    padding: 0;
+    background-color: #C3E2F6; /* Soft Blue */
+    color: #111345; /* Deep Navy */
+}
+
+/* Centered Container */
+.center {
+    text-align: center;
+}
+
+/* Navigation Bar */
+.navigation {
+    background-color: #111345; /* Deep Navy */
+    padding: 8px 0; /* Reduced padding to make it thinner */
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.navigation .links a {
+    color: #F2EFE7; /* Warm Beige */
+    text-decoration: none;
+    margin: 0 10px;
+    font-size: 16px; /* Slightly smaller text */
+    font-weight: bold;
+    transition: color 0.3s ease-in-out;
+    display: inline-block;
+    padding: 6px 10px; /* Reduced padding inside the links */
+}
+
+.navigation .links a:hover {
+    color: #C3E2F6; /* Soft Blue */
+}
+
+/* Title & Author */
+h1.title {
+    color: #111345; /* Deep Navy */
+    font-size: 2.5em;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+p.author {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #111345; /* Deep Navy */
+}
+
+/* Image Gallery - 2x2 Grid, Bigger Images, Closer */
+.gallery-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px; /* Closer spacing */
+    justify-content: center;
+    max-width: 600px;
+    padding: 20px;
+    margin: auto;
+}
+
+/* Image Styling */
+.gallery {
+    text-align: center;
+    width: 100%;
+}
+
+.gallery img {
+    width: 220px; /* Bigger images */
+    height: 220px;
+    object-fit: cover;
+    border-radius: 12px;
+    box-shadow: 2px 4px 8px rgba(17, 19, 69, 0.4);
+    transition: transform 0.3s ease-in-out;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+.description {
+    margin-top: 5px;
+    font-size: 1em;
+    font-weight: bold;
+    color: #111345; /* Deep Navy */
+}
+
+/* Section Styling */
+.section {
+    background: #F2EFE7; /* Warm Beige */
+    padding: 25px;
+    margin: 30px auto;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Justify Text in Sections */
+.section p {
+    text-align: justify;
+    color: #111345; /* Deep Navy */
+}
+
+h3 {
+    color: #111345;
+    font-size: 1.8em;
+    border-bottom: 3px solid #111345;
+    padding-bottom: 8px;
+    margin-bottom: 15px;
+}
+
+/* "Go Top" Button */
+.button {
+    display: inline-block;
+    text-decoration: none;
+    background: #111345; /* Deep Navy */
+    color: #F2EFE7; /* Warm Beige */
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: bold;
+    margin-top: 10px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.button:hover {
+    background: #C3E2F6; /* Soft Blue */
+    color: #111345; /* Deep Navy */
+    transform: translateY(-2px);
+}
+
+/* Navigation (Years) */
+.navbar {
+    background: #111345; /* Deep Navy */
+    padding: 12px;
+    border-radius: 12px;
+    max-width: 400px;
+    margin: 30px auto;
+}
+
+.navbar ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    color: #F2EFE7; /* Warm Beige */
+    font-weight: bold;
+    font-size: 1.1em;
+    transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #C3E2F6; /* Soft Blue */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gallery-container {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar ul {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .navbar ul li {
+        margin-bottom: 10px;
+    }
+}

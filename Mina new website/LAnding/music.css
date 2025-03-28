@@ -1,0 +1,152 @@
+body {
+    font-family: 'Lato', sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: #F2EFE7; /* Light Beige */
+}
+
+.music-container {
+    max-width: 90%;
+    min-height: 90vh;
+    margin: 40px auto;
+    padding: 50px;
+    background: #ffffff; /* White for better contrast */
+    border-radius: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: all 0.3s ease-in-out;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5em;
+    color: #111345; /* Deep Navy */
+    text-shadow: 2px 2px 10px rgba(17, 19, 69, 0.3);
+    font-weight: bold;
+    padding-bottom: 15px;
+    position: relative;
+    letter-spacing: 2px;
+    animation: bounceIn 1.5s ease;
+}
+
+.music-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+    padding: 0 20px;
+}
+
+.music-item {
+    width: 280px;
+    padding: 20px;
+    background: #111345; /* Deep Navy */
+    border-radius: 20px;
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.iframe-wrapper {
+    position: relative;
+    width: 100%;
+    height: 160px;
+    background-color: #c3e2f6; /* Soft Blue */
+    border-radius: 15px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.iframe-wrapper iframe {
+    border: none;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+/* Loading Spinner Styles */
+.loading-spinner {
+    border: 4px solid #f3f3f3;
+    border-top: 4px solid #111345; /* Deep Navy */
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+.music-item h3 {
+    color: #c3e2f6; /* Soft Blue */
+    font-size: 1.5em;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.6);
+    font-weight: bold;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.music-item p {
+    color: #F2EFE7; /* Light Beige */
+    font-size: 1.1em;
+    opacity: 0.9;
+    font-style: italic;
+}
+
+iframe {
+    border-radius: 15px;
+    width: 100%;
+    height: 160px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+}
+
+.links {
+    margin-top: 40px;
+}
+
+.links a {
+    display: inline-block;
+    text-decoration: none;
+    margin: 10px;
+    padding: 15px 30px;
+    background: #111345; /* Deep Navy */
+    color: white;
+    font-size: 1.2em;
+    font-weight: bold;
+    border-radius: 50px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 4px 4px 15px rgba(0, 0, 0, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.links a:hover {
+    background: #c3e2f6; /* Soft Blue */
+    color: #111345; /* Deep Navy */
+    box-shadow: 6px 6px 20px rgba(0, 0, 0, 0.4);
+    transform: scale(1.1);
+}
+
+@media (max-width: 768px) {
+    .music-container {
+        padding: 30px;
+    }
+
+    .music-grid {
+        padding: 0;
+    }
+
+    .music-item {
+        width: 100%;
+    }
+}
